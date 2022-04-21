@@ -5,7 +5,6 @@ import de.codecentric.hikaku.converters.EndpointConverter
 import de.codecentric.hikaku.endpoints.Endpoint
 import de.codecentric.hikaku.reporters.MatchResult
 import de.codecentric.hikaku.reporters.Reporter
-import kotlin.test.fail
 
 /**
  * Entry point for writing a hikaku test. Provide the [EndpointConverter]s and call [match] to test if the specification and the implementation of your REST-API match.
@@ -69,7 +68,7 @@ class Hikaku(
         )
 
         if (notExpected.isNotEmpty() || notFound.isNotEmpty()) {
-            fail("Implementation does not match specification.")
+            error("Implementation does not match specification.")
         }
     }
 

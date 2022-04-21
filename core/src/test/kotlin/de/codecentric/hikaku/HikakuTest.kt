@@ -10,7 +10,6 @@ import de.codecentric.hikaku.reporters.Reporter
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Nested
 import org.junit.jupiter.api.Test
-import org.opentest4j.AssertionFailedError
 import kotlin.test.assertFailsWith
 
 class HikakuTest {
@@ -45,7 +44,7 @@ class HikakuTest {
             )
 
             //when
-            assertFailsWith<AssertionError> {
+            assertFailsWith<IllegalStateException> {
                 hikaku.match()
             }
         }
@@ -115,7 +114,7 @@ class HikakuTest {
             )
 
             //when
-            assertFailsWith<AssertionFailedError> {
+            assertFailsWith<IllegalStateException> {
                 hikaku.match()
             }
         }
@@ -185,7 +184,7 @@ class HikakuTest {
             )
 
             //when
-            assertFailsWith<AssertionFailedError> {
+            assertFailsWith<IllegalStateException> {
                 hikaku.match()
             }
         }
@@ -323,7 +322,7 @@ class HikakuTest {
                 )
 
                 //when
-                assertFailsWith<AssertionFailedError> {
+                assertFailsWith<IllegalStateException> {
                     hikaku.match()
                 }
             }
@@ -461,7 +460,7 @@ class HikakuTest {
                 )
 
                 //when
-                assertFailsWith<AssertionFailedError> {
+                assertFailsWith<IllegalStateException> {
                     hikaku.match()
                 }
             }
@@ -591,7 +590,7 @@ class HikakuTest {
                 )
 
                 //when
-                assertFailsWith<AssertionFailedError> {
+                assertFailsWith<IllegalStateException> {
                     hikaku.match()
                 }
             }
@@ -727,7 +726,7 @@ class HikakuTest {
                 )
 
                 //when
-                assertFailsWith<AssertionFailedError> {
+                assertFailsWith<IllegalStateException> {
                     hikaku.match()
                 }
             }
@@ -857,7 +856,7 @@ class HikakuTest {
                 )
 
                 //when
-                assertFailsWith<AssertionFailedError> {
+                assertFailsWith<IllegalStateException> {
                     hikaku.match()
                 }
             }
@@ -993,7 +992,7 @@ class HikakuTest {
                 )
 
                 //when
-                assertFailsWith<AssertionFailedError> {
+                assertFailsWith<IllegalStateException> {
                     hikaku.match()
                 }
             }
@@ -1123,7 +1122,7 @@ class HikakuTest {
                 )
 
                 //when
-                assertFailsWith<AssertionFailedError> {
+                assertFailsWith<IllegalStateException> {
                     hikaku.match()
                 }
             }
@@ -1260,7 +1259,7 @@ class HikakuTest {
                 )
 
                 //when
-                assertFailsWith<AssertionFailedError> {
+                assertFailsWith<IllegalStateException> {
                     hikaku.match()
                 }
             }
@@ -1397,7 +1396,7 @@ class HikakuTest {
                 )
 
                 //when
-                assertFailsWith<AssertionFailedError> {
+                assertFailsWith<IllegalStateException> {
                     hikaku.match()
                 }
             }
@@ -1525,7 +1524,7 @@ class HikakuTest {
                 )
 
                 //when
-                assertFailsWith<AssertionFailedError> {
+                assertFailsWith<IllegalStateException> {
                     hikaku.match()
                 }
             }
