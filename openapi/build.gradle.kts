@@ -1,12 +1,15 @@
 //archivesBaseName = 'hikaku-openapi'
 
 plugins {
-  id("buildsrc.convention.kotlin-jvm")
+  buildsrc.convention.`kotlin-jvm`
 }
 
+description =
+  "A library that tests if the implementation of a REST-API meets its specification. This module contains a converter for OpenAPI specifications."
+
 dependencies {
-  api project(':core')
-  api 'io.swagger.parser.v3:swagger-parser-v3:2.0.27'
+  implementation(projects.core)
+  implementation("io.swagger.parser.v3:swagger-parser-v3:2.0.27")
 }
 
 //uploadArchives {
@@ -14,7 +17,7 @@ dependencies {
 //    mavenDeployer {
 //      pom.project {
 //        name = 'hikaku-openapi'
-//        description = 'A library that tests if the implementation of a REST-API meets its specification. This module contains a converter for OpenAPI specifications.'
+//        description =
 //      }
 //    }
 //  }

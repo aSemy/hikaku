@@ -1,10 +1,14 @@
 //archivesBaseName = 'hikaku-wadl'
 
 plugins {
-  id("buildsrc.convention.kotlin-jvm")
+  buildsrc.convention.`kotlin-jvm`
 }
+
+description =
+  "A library that tests if the implementation of a REST-API meets its specification. This module contains a converter for WADL files."
+
 dependencies {
-  api project(':core')
+  implementation(projects.core)
 }
 
 //uploadArchives {
@@ -12,7 +16,7 @@ dependencies {
 //    mavenDeployer {
 //      pom.project {
 //        name = 'hikaku-wadl'
-//        description = 'A library that tests if the implementation of a REST-API meets its specification. This module contains a converter for WADL files.'
+//        description =
 //      }
 //    }
 //  }

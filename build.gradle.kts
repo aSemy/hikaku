@@ -1,38 +1,21 @@
 plugins {
-    idea
-    id 'com.github.ben-manes.versions' version '0.39.0'
+  idea
+  id("com.github.ben-manes.versions") version "0.39.0"
 }
 
-group = 'de.codecentric.hikaku'
-version = '3.2.1-SNAPSHOT'
+group = "de.codecentric.hikaku"
+version = "3.2.1-SNAPSHOT"
 
 
 //
 //subprojects {
-//    apply plugin: 'idea'
 //    apply plugin: 'maven'
 //    apply plugin: 'signing'
-//    apply plugin: 'kotlin'
-//    apply plugin: 'java-library'
 //
-//    version = '3.2.1-SNAPSHOT'
 //    sourceCompatibility = jvmVersion
 //    targetCompatibility = jvmVersion
 //
-//    compileKotlin {
-//        kotlinOptions {
-//            freeCompilerArgs = ['-Xjsr305=strict']
-//            jvmTarget = jvmVersion
-//        }
-//    }
-//
-//    compileTestKotlin {
-//        kotlinOptions {
-//            freeCompilerArgs = ['-Xjsr305=strict']
-//            jvmTarget = jvmVersion
-//        }
-//    }
-//
+
 //    dependencies {
 //        api "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlinVersion"
 //        api "org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion"
@@ -42,24 +25,6 @@ version = '3.2.1-SNAPSHOT'
 //        testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
 //        testImplementation "org.jetbrains.kotlin:kotlin-test-junit5:$kotlinVersion"
 //        testImplementation 'org.assertj:assertj-core:3.20.2'
-//    }
-//
-//    test {
-//        useJUnitPlatform()
-//    }
-//
-//    task javadocJar(type: Jar) {
-//        archiveClassifier = 'javadoc'
-//        from javadoc
-//    }
-//
-//    task sourcesJar(type: Jar) {
-//        archiveClassifier = 'sources'
-//        from sourceSets.main.allSource
-//    }
-//
-//    artifacts {
-//        archives javadocJar, sourcesJar
 //    }
 //
 //    signing {

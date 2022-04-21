@@ -1,12 +1,15 @@
 //archivesBaseName = 'hikaku-micronaut'
 
 plugins {
-  id("buildsrc.convention.kotlin-jvm")
+  buildsrc.convention.`kotlin-jvm`
 }
 
+description =
+  "A library that tests if the implementation of a REST-API meets its specification. This module contains a converter for micronaut implementations."
+
 dependencies {
-  api project(':core')
-  api 'io.micronaut:micronaut-http:3.0.0'
+  implementation(projects.core)
+  implementation("io.micronaut:micronaut-http:3.0.0")
 }
 
 //uploadArchives {
@@ -14,7 +17,6 @@ dependencies {
 //    mavenDeployer {
 //      pom.project {
 //        name = 'hikaku-micronaut'
-//        description = 'A library that tests if the implementation of a REST-API meets its specification. This module contains a converter for micronaut implementations.'
 //      }
 //    }
 //  }
