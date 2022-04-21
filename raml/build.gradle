@@ -1,5 +1,8 @@
-group = 'de.codecentric.hikaku'
-archivesBaseName = 'hikaku-raml'
+//archivesBaseName = 'hikaku-raml'
+
+plugins {
+  id("buildsrc.convention.kotlin-jvm")
+}
 
 dependencies {
   api project(':core')
@@ -9,13 +12,13 @@ dependencies {
   testImplementation "io.mockk:mockk:1.12.0"
 }
 
-uploadArchives {
-  repositories {
-    mavenDeployer {
-      pom.project {
-        name = 'hikaku-raml'
-        description = 'A library to test if the implementation of a REST-API meets its specification. This module contains a converter for raml specifications.'
-      }
-    }
-  }
-}
+//uploadArchives {
+//  repositories {
+//    mavenDeployer {
+//      pom.project {
+//        name = 'hikaku-raml'
+//        description = 'A library to test if the implementation of a REST-API meets its specification. This module contains a converter for raml specifications.'
+//      }
+//    }
+//  }
+//}
