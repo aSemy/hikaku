@@ -8,6 +8,25 @@ plugins {
   `java-library`
 }
 
+val projectKotlinVersion = "1.6.21"
+
+dependencies {
+  implementation(platform(kotlin("bom")))
+  implementation(kotlin("stdlib-jdk8"))
+  implementation(kotlin("reflect"))
+
+  testImplementation(platform("org.junit:junit-bom:5.8.2"))
+  testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
+
+  testImplementation("org.assertj:assertj-core:3.20.2")
+  testImplementation(kotlin("test"))
+  testImplementation(kotlin("test-junit5"))
+}
+
+java {
+  withSourcesJar()
+  withJavadocJar()
+}
 
 tasks.withType<KotlinCompile>().configureEach {
 
