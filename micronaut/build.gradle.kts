@@ -1,7 +1,6 @@
-//archivesBaseName = 'hikaku-micronaut'
-
 plugins {
   buildsrc.convention.`kotlin-jvm`
+  buildsrc.convention.`publish-jvm`
 }
 
 description =
@@ -12,12 +11,6 @@ dependencies {
   implementation("io.micronaut:micronaut-http:3.0.0")
 }
 
-//uploadArchives {
-//  repositories {
-//    mavenDeployer {
-//      pom.project {
-//        name = 'hikaku-micronaut'
-//      }
-//    }
-//  }
-//}
+base {
+  archivesName.set("hikaku-micronaut")
+}

@@ -23,11 +23,6 @@ dependencies {
   testImplementation(kotlin("test-junit5"))
 }
 
-java {
-  withSourcesJar()
-  withJavadocJar()
-}
-
 tasks.withType<KotlinCompile>().configureEach {
 
   kotlinOptions {

@@ -1,7 +1,6 @@
-//archivesBaseName = 'hikaku-openapi'
-
 plugins {
   buildsrc.convention.`kotlin-jvm`
+  buildsrc.convention.`publish-jvm`
 }
 
 description =
@@ -12,13 +11,6 @@ dependencies {
   implementation("io.swagger.parser.v3:swagger-parser-v3:2.0.27")
 }
 
-//uploadArchives {
-//  repositories {
-//    mavenDeployer {
-//      pom.project {
-//        name = 'hikaku-openapi'
-//        description =
-//      }
-//    }
-//  }
-//}
+base {
+  archivesName.set("hikaku-openapi")
+}

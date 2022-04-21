@@ -1,7 +1,6 @@
-//archivesBaseName = 'hikaku-wadl'
-
 plugins {
   buildsrc.convention.`kotlin-jvm`
+  buildsrc.convention.`publish-jvm`
 }
 
 description =
@@ -11,13 +10,6 @@ dependencies {
   implementation(projects.core)
 }
 
-//uploadArchives {
-//  repositories {
-//    mavenDeployer {
-//      pom.project {
-//        name = 'hikaku-wadl'
-//        description =
-//      }
-//    }
-//  }
-//}
+base {
+  archivesName.set("hikaku-wadl")
+}

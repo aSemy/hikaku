@@ -1,8 +1,8 @@
 plugins {
   buildsrc.convention.`kotlin-jvm`
+  buildsrc.convention.`publish-jvm`
 }
 
-//archivesBaseName = 'hikaku-spring'
 description =
   "A library that tests if the implementation of a REST-API meets its specification. This module contains a converter for Spring MVC implementations."
 
@@ -16,14 +16,6 @@ dependencies {
   testImplementation("org.springframework.boot:spring-boot-starter-web:$springBootVersion")
 }
 
-
-//uploadArchives {
-//  repositories {
-//    mavenDeployer {
-//      pom.project {
-//        name = 'hikaku-spring'
-//        description =
-//      }
-//    }
-//  }
-//}
+base {
+  archivesName.set("hikaku-spring")
+}

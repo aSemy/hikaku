@@ -1,7 +1,6 @@
-//archivesBaseName = 'hikaku-raml'
-
 plugins {
   buildsrc.convention.`kotlin-jvm`
+  buildsrc.convention.`publish-jvm`
 }
 
 description =
@@ -14,13 +13,6 @@ dependencies {
   testImplementation("io.mockk:mockk:1.12.0")
 }
 
-//uploadArchives {
-//  repositories {
-//    mavenDeployer {
-//      pom.project {
-//        name = 'hikaku-raml'
-//        description =
-//      }
-//    }
-//  }
-//}
+base {
+  archivesName.set("hikaku-raml")
+}
