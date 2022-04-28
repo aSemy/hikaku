@@ -1,6 +1,6 @@
 plugins {
   buildsrc.convention.`kotlin-jvm`
-  buildsrc.convention.`publish-jvm`
+  buildsrc.convention.`maven-publish`
 }
 
 description =

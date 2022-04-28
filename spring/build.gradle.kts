@@ -1,19 +1,23 @@
 plugins {
   buildsrc.convention.`kotlin-jvm`
-  buildsrc.convention.`publish-jvm`
+  buildsrc.convention.`maven-publish`
 }
 
 description =
   "A library that tests if the implementation of a REST-API meets its specification. This module contains a converter for Spring MVC implementations."
 
-val springBootVersion = "2.5.4"
+val springFrameworkVersion = "5.3.19"
+val springBootVersion = "2.6.7"
 
 dependencies {
   implementation(projects.core)
-  implementation("org.springframework:spring-webmvc:5.3.9")
+  implementation(platform("org.springframework:spring-framework-bom:$springFrameworkVersion"))
+  implementation(platform("org.springframework.boot:spring-boot-dependencies:$springBootVersion"))
 
-  testImplementation("org.springframework.boot:spring-boot-starter-test:$springBootVersion")
-  testImplementation("org.springframework.boot:spring-boot-starter-web:$springBootVersion")
+  implementation("org.springframework:spring-webmvc")
+
+  testImplementation("org.springframework.boot:spring-boot-starter-test")
+  testImplementation("org.springframework.boot:spring-boot-starter-web")
 }
 
 base {
