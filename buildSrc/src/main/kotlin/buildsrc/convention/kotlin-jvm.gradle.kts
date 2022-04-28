@@ -9,6 +9,9 @@ plugins {
 }
 
 val projectKotlinVersion = "1.6.21"
+val projectKotlinTarget = "1.6"
+val projectJvmVersion = "8"
+val projectJvmTarget = "1.8"
 
 dependencies {
   implementation(platform(kotlin("bom")))
@@ -26,9 +29,9 @@ dependencies {
 tasks.withType<KotlinCompile>().configureEach {
 
   kotlinOptions {
-    jvmTarget = "1.8"
-    apiVersion = "1.6"
-    languageVersion = "1.6"
+    jvmTarget = projectJvmTarget
+    apiVersion = projectKotlinTarget
+    languageVersion = projectKotlinTarget
 
     freeCompilerArgs += listOf(
       "-Xjsr305=strict",
@@ -36,6 +39,12 @@ tasks.withType<KotlinCompile>().configureEach {
       "-opt-in=kotlin.ExperimentalStdlibApi",
       "-opt-in=kotlin.time.ExperimentalTime",
     )
+  }
+}
+
+kotlin {
+  jvmToolchain {
+    (this as JavaToolchainSpec).languageVersion.set(JavaLanguageVersion.of(projectJvmVersion))
   }
 }
 

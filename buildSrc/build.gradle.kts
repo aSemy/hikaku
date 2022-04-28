@@ -23,7 +23,8 @@ dependencies {
 }
 
 
-val gradleJvmTarget = "11"
+val gradleJvmTarget = "1.8"
+val gradleJvmVersion = "8"
 val gradleKotlinTarget = "1.6"
 
 tasks.withType<KotlinCompile>().configureEach {
@@ -43,7 +44,7 @@ tasks.withType<KotlinCompile>().configureEach {
 
 kotlin {
   jvmToolchain {
-    (this as JavaToolchainSpec).languageVersion.set(JavaLanguageVersion.of(gradleJvmTarget))
+    (this as JavaToolchainSpec).languageVersion.set(JavaLanguageVersion.of(gradleJvmVersion))
   }
 
   kotlinDslPluginOptions {
