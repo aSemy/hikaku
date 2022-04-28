@@ -10,7 +10,7 @@ val springFrameworkVersion = "5.3.19"
 val springBootVersion = "2.6.7"
 
 dependencies {
-  implementation(projects.core)
+  implementation(projects.modules.hikakuCore)
   implementation(platform("org.springframework:spring-framework-bom:$springFrameworkVersion"))
   implementation(platform("org.springframework.boot:spring-boot-dependencies:$springBootVersion"))
 

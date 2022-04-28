@@ -7,7 +7,7 @@ description =
   "A library that tests if the implementation of a REST-API meets its specification. This module contains a converter for WADL files."
 
 dependencies {
-  implementation(projects.core)
+  implementation(projects.modules.hikakuCore)
 }
 
 base {

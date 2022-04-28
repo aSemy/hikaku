@@ -3,13 +3,13 @@ rootProject.name = "hikaku"
 apply(from = "./buildSrc/repositories.settings.gradle.kts")
 
 include(
-  ":core",
-  ":openapi",
-  ":spring",
-  ":wadl",
-  ":raml",
-  ":jax-rs",
-  ":micronaut",
+  ":modules:hikaku-core",
+  ":modules:hikaku-openapi",
+  ":modules:hikaku-spring",
+  ":modules:hikaku-wadl",
+  ":modules:hikaku-raml",
+  ":modules:hikaku-jax-rs",
+  ":modules:hikaku-micronaut",
 )
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")

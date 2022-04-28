@@ -7,7 +7,7 @@ description =
   "A library that tests if the implementation of a REST-API meets its specification. This module contains a converter for jax-rs implementations."
 
 dependencies {
-  implementation(projects.core)
+  implementation(projects.modules.hikakuCore)
   implementation("jakarta.ws.rs:jakarta.ws.rs-api:3.0.0")
 }
 
